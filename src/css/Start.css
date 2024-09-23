@@ -1,0 +1,94 @@
+main {
+    width: 100%;
+    height: 100%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 150px;
+    color: white;
+    animation: glow 4s infinite; 
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 
+          0 0 5px #fff, 
+          0 0 10px #ff00ff, 
+          0 0 15px #ff00ff, 
+          0 0 20px #ff00ff, 
+          0 0 30px #ff00ff, 
+          0 0 40px #ff00ff;
+    }
+    25% {
+        text-shadow: 
+          0 0 5px #fff, 
+          0 0 10px #ffdc40, 
+          0 0 15px #ffdc40, 
+          0 0 20px #ffdc40, 
+          0 0 30px #ffdc40, 
+          0 0 40px #ffdc40;
+    }
+    50% {
+        text-shadow: 
+          0 0 10px #00ffff, 
+          0 0 20px #00ffff, 
+          0 0 30px #00ffff, 
+          0 0 40px #00ffff, 
+          0 0 50px #00ffff, 
+          0 0 60px #00ffff;
+    }
+    75% {
+        text-shadow: 
+          0 0 10px #4cec23, 
+          0 0 20px #4cec23, 
+          0 0 30px #4cec23, 
+          0 0 40px #4cec23, 
+          0 0 50px #4cec23, 
+          0 0 60px #4cec23;
+    }
+    100% {
+        text-shadow: 
+          0 0 5px #fff, 
+          0 0 10px #ff00ff, 
+          0 0 15px #ff00ff, 
+          0 0 20px #ff00ff, 
+          0 0 30px #ff00ff, 
+          0 0 40px #ff00ff;
+    }
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin-top: 50px;
+    width: 25%;
+    height: 20%;
+    font-size: 100px;
+    border: 5px solid black;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: transform 200ms;
+    
+}
+
+a:hover {
+    background-color: rgb(251, 255, 0);
+    transform: scale(1.1);
+}
+
+a:active {
+    background-color: rgb(255, 187, 0);
+    border: 5px solid white;
+    color: white;
+    transform: scale(.9);
+}
+
