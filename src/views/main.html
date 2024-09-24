@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecocos</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="puntos">
+            <h2>Puntos: </h2><span id="puntos">0</span>
+        </div>
+        <div class="tiempo">
+            <img class="img-reloj" src="../assets/images/reloj.png" alt="">
+            <h2 id="tiempo">30</h2><span>s</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="puzzle"></div>
+        <div id="piezas"></div>
+    </div>
+
+    <!-- Ventana de victoria -->
+    <div id="ventana-ganar" class="ventana" style="display:none;">
+        <h2>¡Ganaste!</h2>
+        <button id="siguiente-nivel">Siguiente Nivel</button>
+    </div>
+
+    <!-- Ventana de derrota -->
+    <div id="ventana-perder" class="ventana" style="display:none;">
+        <h2>¡Perdiste!</h2>
+        <button id="salir">Salir</button>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
