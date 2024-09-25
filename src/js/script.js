@@ -1,4 +1,4 @@
-let tiempoRestante = 600;
+let tiempoRestante = 60;
 let puntos = 0; // Puntos acumulados
 let timeWorker;
 let pointsWorker;
