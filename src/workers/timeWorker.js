@@ -1,13 +1,26 @@
-self.onmessage = (e) => {
-    let tiempoRestante = e.data;
+let interval;
 
-    const interval = setInterval(() => {
-        if (tiempoRestante > 0) {
-            tiempoRestante--;
-            self.postMessage(tiempoRestante);
-        } else {
+self.onmessage = (e) => {
+    if (e.data.command === 'start') {
+        let tiempoRestante = e.data.time;
+
+        if (interval) {
             clearInterval(interval);
-            self.postMessage(0);
         }
-    }, 1000);
+
+        // Iniciamos el nuevo temporizador
+        interval = setInterval(() => {
+            if (tiempoRestante > 0) {
+                tiempoRestante--;
+                self.postMessage(tiempoRestante);
+            } else {
+                clearInterval(interval);
+                self.postMessage(0);
+            }
+        }, 1000);
+    }
+
+    if (e.data.command === 'stop') {
+        clearInterval(interval);
+    }
 };
